@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Resume(models.Model):
+    objects = None
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Владелец')
     title = models.CharField('Название', max_length=128)
     money = models.PositiveIntegerField('Желаемая зарплата')
